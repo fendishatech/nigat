@@ -27,7 +27,8 @@
     "express-ejs-layouts": "^2.5.1",
     "method-override": "^3.0.0",
     "mysql2": "^3.3.1",
-    "sequelize": "^6.31.1"
+    "sequelize": "^6.31.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
