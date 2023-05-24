@@ -1,7 +1,68 @@
-<nav>
-  <ul>
+<style>
+  .active {
+    background-color: green;
+    color: white;
+  }
+</style>
+<!-- Screen -->
+<nav
+  class="bg-transparent w-full h-[60px] px-6 py-2 flex justify-between fixed top-0"
+>
+  <!-- logo -->
+  <h1 class="text-green-400 text-xl font-semibold">
+    Nigat <span class="font-bold text-2xl">Jobs</span>
+  </h1>
+  <!-- menu -->
+  <ul class="flex items-center space-x-4">
     <li>
-      <a href="/">Blogs</a>
+      <a
+        href="#"
+        id="jobsLink"
+        class="font-semibold hover:bg-green-600 px-6 py-3 rounded"
+        >Jobs</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        id="blogsLink"
+        class="font-semibold hover:bg-green-600 px-6 py-3 rounded"
+        >Blogs</a
+      >
     </li>
   </ul>
+  <!-- personalize -->
+  <button
+    class="px-6 text-center text-white font-semibold bg-green-400 rounded shadow-lg"
+  >
+    Login
+  </button>
 </nav>
+<!-- Mobile -->
+<script>
+  // Get the Jobs and Blogs links
+  const jobsLink = document.getElementById("jobsLink");
+  const blogsLink = document.getElementById("blogsLink");
+
+  // Add event listener to Jobs link
+  jobsLink.addEventListener("click", function () {
+    // Remove active class from all links
+    jobsLink.classList.remove("active");
+    blogsLink.classList.remove("active");
+
+    // Add active class to Jobs link
+    jobsLink.classList.add("active");
+    jobsLink.classList.add("shadow-lg");
+  });
+
+  // Add event listener to Blogs link
+  blogsLink.addEventListener("click", function () {
+    // Remove active class from all links
+    jobsLink.classList.remove("active");
+    blogsLink.classList.remove("active");
+
+    // Add active class to Blogs link
+    blogsLink.classList.add("active");
+    blogsLink.classList.add("shadow-lg");
+  });
+</script>
