@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const expressLayouts = require("express-ejs-layouts");
-const blogRouter = require("./routes/blog.router");
+const homeRouter = require("./routes/home.router");
 
 class ExpressApp {
   constructor(port) {
@@ -25,7 +25,7 @@ class ExpressApp {
   }
 
   setupRoutes() {
-    this.app.use("/", blogRouter);
+    this.app.use("/", homeRouter);
   }
 
   startServer(port) {
