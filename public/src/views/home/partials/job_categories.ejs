@@ -1,0 +1,46 @@
+<section>
+  <h1 class="text-4xl text-slate-500 text-center font-semibold">
+    Job Categories
+  </h1>
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <% const jobCategories = ['Web Developer', 'Software Engineer',
+      'DataAnalyst', 'UX Designer', 'Project Manager']; %> <%
+      jobCategories.forEach(function(jobCategory) { %>
+      <div class="md:w-1/4 hover:shadow-xl transition duration-200">
+        <div
+          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+        >
+          <div class="flex justify-center p-8">
+            <svg
+              class="w-12 h-w-12 text-green-400 mr-1"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+              ></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h2
+              class="tracking-widest text-center text-base title-font font-medium text-gray-400 mb-1"
+            >
+              6 jobs
+            </h2>
+            <h1
+              class="title-font text-center text-lg font-medium text-gray-600 mb-3"
+            >
+              <%= jobCategory %>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
