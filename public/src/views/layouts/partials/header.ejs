@@ -6,25 +6,34 @@
 </style>
 <!-- Screen -->
 <nav
-  class="bg-transparent w-full h-[60px] px-6 py-2 flex justify-between fixed top-0"
+  id="navbar"
+  class="bg-opacity-0 backdrop-filter backdrop-blur-lg w-full h-[72px] px-6 py-2 z-10 flex justify-between fixed top-0"
 >
   <!-- logo -->
-  <h1 class="text-green-400 text-xl font-semibold">
-    Nigat <span class="font-bold text-2xl">Jobs</span>
+  <h1 class="text-slate-700 text-xl font-semibold">
+    Nigat <span class="text-green-400 font-bold text-2xl">Jobs</span>
   </h1>
   <!-- menu -->
   <ul class="flex items-center space-x-4">
     <li>
       <a
-        href="#"
+        href="/"
         id="jobsLink"
         class="font-semibold hover:bg-green-600 px-6 py-3 rounded active shadow-lg"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="/jobs"
+        id="jobsLink"
+        class="font-semibold hover:bg-green-600 px-6 py-3 rounded shadow-lg"
         >Jobs</a
       >
     </li>
     <li>
       <a
-        href="#"
+        href="/blogs"
         id="blogsLink"
         class="font-semibold hover:bg-green-600 px-6 py-3 rounded"
         >Blogs</a
@@ -64,5 +73,15 @@
     // Add active class to Blogs link
     blogsLink.classList.add("active");
     blogsLink.classList.add("shadow-lg");
+  });
+
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY;
+    if (scrollPos > 72) {
+      navbar.classList.add("backdrop-filter", "backdrop-blur-lg");
+    } else {
+      navbar.classList.remove("backdrop-filter", "backdrop-blur-lg");
+    }
   });
 </script>
