@@ -4,7 +4,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const expressLayouts = require("express-ejs-layouts");
+const authRouter = require("./routes/auth.routes");
 const homeRouter = require("./routes/home.routes");
+const jobRouter = require("./routes/job.routes");
+const blogRouter = require("./routes/blog.routes");
 
 class ExpressApp {
   constructor(port) {
@@ -26,6 +29,9 @@ class ExpressApp {
 
   setupRoutes() {
     this.app.use("/", homeRouter);
+    this.app.use("/auth", authRouter);
+    this.app.use("/jobs", jobRouter);
+    this.app.use("/blogs", blogRouter);
   }
 
   startServer(port) {
